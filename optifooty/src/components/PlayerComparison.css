@@ -1,0 +1,123 @@
+.player-comparison {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 950px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.comparison-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.clearcompare-button {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.clearcompare-button:hover {
+    background: #ff3333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comparison-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+}
+
+.comparison-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.playercompare-name {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+.radar-chart {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    border-radius: 2%;
+}
+
+/* Dark mode styles */
+body.dark-mode .player-comparison {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+body.dark-mode .comparison-header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .radar-chart {
+    background: #2b2b2b;
+}
+
+body.dark-mode .clearcompare-button {
+    background: #ff4d4d;
+}
+
+body.dark-mode .clearcompare-button:hover {
+    background: #ff3333;
+}
+
+@media (max-width: 768px) {
+    .player-comparison {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .comparison-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .comparison-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .comparison-content {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .radar-chart {
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 10px;
+    }
+
+    .playercompare-name {
+        font-size: 1rem;
+    }
+}

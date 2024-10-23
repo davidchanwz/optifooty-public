@@ -1,0 +1,94 @@
+.transfer-constraint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transfer-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px; /* Adjust font size for better appearance */
+  color: #333; /* Darker color for better visibility */
+}
+
+.transfer-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-button {
+  background-color: #ccc;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.arrow-button:active {
+  background-color: #bbb;
+}
+
+.transfer-input {
+  padding: 5px;
+  font-size: 14px; /* Slightly smaller font size */
+  width: 60px; /* Shorter input field */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center; /* Center text for a cleaner look */
+  margin: 0 5px; /* Space between input and buttons */
+  /* Hide default spinners */
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.transfer-input::-webkit-outer-spin-button,
+.transfer-input::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Safari and Chrome */
+  margin: 0; /* Removes margin in Safari and Chrome */
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px; /* Position error message closer to input */
+  margin-bottom: 10px; /* Space below error message */
+}
+
+@media (max-width: 768px) {
+  .transfer-input {
+    width: 50px; /* Adjust width for smaller screens */
+  }
+
+  .transfer-label {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Dark mode styles */
+body.dark-mode .transfer-constraint {
+  background-color: #1e1e1e; /* Dark background color */
+}
+
+body.dark-mode .transfer-label {
+  color: #f0f0f0; /* Light color for labels */
+}
+
+body.dark-mode .transfer-input {
+  background-color: #2c2c2c; /* Darker background for input */
+  color: #f0f0f0; /* Light color for text */
+  border: 1px solid #555; /* Darker border color */
+}
+
+body.dark-mode .arrow-button {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+body.dark-mode .arrow-button:active {
+  background-color: #555;
+}
+
+body.dark-mode .error-message {
+  color: #ff6b6b; /* Light red for error message */
+}

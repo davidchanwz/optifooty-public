@@ -1,0 +1,133 @@
+/* src/pages/About.css */
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.about-logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-logo {
+    width: 200px;
+    height: auto;
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-person {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.about-person h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.about-person p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 24px;
+    }
+
+    .about-section p {
+        font-size: 16px;
+    }
+
+    .about-person h3 {
+        font-size: 20px;
+    }
+
+    .about-person p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section h2 {
+        font-size: 20px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
+
+    .about-person h3 {
+        font-size: 18px;
+    }
+
+    .about-person p {
+        font-size: 12px;
+    }
+
+    .about-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Dark mode styles for About Page */
+body.dark-mode .about-container {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .about-section h2 {
+    color: white;
+}
+
+body.dark-mode .about-section p {
+    color: #ddd;
+}
+
+body.dark-mode .about-person h3 {
+    color: #4dabf7; /* Lighter blue for better contrast */
+}
+
+body.dark-mode .about-person p {
+    color: #ccc;
+}
+
+body.dark-mode .about-photo {
+    border: 2px solid #555; /* Add border to photo for better contrast */
+}

@@ -1,0 +1,211 @@
+/* src/pages/Home.css */
+
+.home {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/hero.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+    color: whitesmoke;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    /* Ensure they display as block elements */
+    text-align: center;
+    /* Center text */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    /* Remove underline from links */
+    color: white;
+    /* Ensure text color is white */
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+.features,
+.how-it-works {
+    padding: 20px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 0 20px 50px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.features h2,
+.how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.features-grid,
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item,
+.step {
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+    min-width: 200px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover,
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item h3,
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p,
+.step p {
+    font-size: 1rem;
+    color: grey;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.9rem;
+    }
+
+    .features-grid,
+    .steps {
+        flex-direction: column;
+    }
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode .home {
+    color: #ddd;
+}
+
+
+
+body.dark-mode .features,
+body.dark-mode .how-it-works {
+    background-color: #333;
+    color: #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .feature-item,
+body.dark-mode .step {
+    background: #444;
+    color: #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .feature-item:hover,
+body.dark-mode .step:hover {
+    background: #555;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}

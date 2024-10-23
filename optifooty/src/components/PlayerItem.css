@@ -1,0 +1,90 @@
+/* src/components/PlayerItem.css */
+
+.player-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    /* Default text color */
+}
+
+.player-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player-name,
+.player-position,
+.player-team {
+    margin: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% / 3); /* Make each item take one-third of the container width */
+}
+
+.selected-icon {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: black;
+    border: 2px solid black;
+    z-index: 10;
+    /* Ensure the icon is above other elements */
+    pointer-events: none;
+    /* Prevent the icon from interfering with hover/click events */
+}
+
+@media (max-width: 768px) {
+    .player-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3px 7px;
+    }
+
+    .player-name,
+    .player-position,
+    .player-team {
+        margin: 0 10px;
+    }
+
+    .player-details {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .player-card {
+        padding: 10px;
+    }
+
+    .player-name,
+    .player-position,
+    .player-team {
+        font-size: 10px;
+    }
+}

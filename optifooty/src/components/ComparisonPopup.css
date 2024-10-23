@@ -1,0 +1,113 @@
+.comparison-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.comparison-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80%; /* Limit the height to make it scrollable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Make only the stats portion scrollable */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.comparison-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.comparison-player {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.comparison-player h3 {
+    text-align: center;
+    color: #007bff;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.stat-key {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-button:hover {
+    color: #0056b3;
+}
+
+/* Dark mode styles */
+body.dark-mode .comparison-content {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .comparison-player {
+    background: #444;
+}
+
+body.dark-mode .comparison-player h3 {
+    color: #66b2ff;
+}
+
+body.dark-mode .close-button {
+    color: #66b2ff;
+}
+
+body.dark-mode .close-button:hover {
+    color: #3399ff;
+}
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+    .comparison-content {
+        width: 95%;
+        max-height: 70%;
+    }
+
+    .comparison-details {
+        flex-direction: column;
+    }
+
+    .comparison-player {
+        margin-bottom: 20px;
+    }
+}

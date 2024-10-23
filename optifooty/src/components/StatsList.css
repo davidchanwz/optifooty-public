@@ -1,0 +1,115 @@
+.player-list {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.statslist-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.error-message {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error-message button {
+    background: none;
+    border: none;
+    color: #cc0000;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.error-message button:hover {
+    text-decoration: underline;
+}
+
+.comparison-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comparison-player {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.stats-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.stat-key {
+    font-weight: bold;
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .tab {
+        padding: 5px 10px;
+        margin: 0 2px;
+        font-size: 14px;
+    }
+
+    .comparison-player {
+        padding: 10px;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode .stats-container {
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .tab {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .tab.active {
+    background-color: #555;
+}
+
+body.dark-mode .comparison-player {
+    background-color: #333;
+}
+
+body.dark-mode .stat-item {
+    background: #444;
+}
+
+body.dark-mode .stat-key {
+    color: #66b2ff;
+}

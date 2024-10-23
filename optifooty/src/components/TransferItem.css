@@ -1,0 +1,49 @@
+.transfer-item {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transfer-player {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .out-player {
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  h4 {
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+
+
+/* Dark mode styles */
+body.dark-mode .transfer-item {
+    background: #2c2c2c; /* Dark background color */
+    border: 1px solid #555; /* Darker border color */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Subtle shadow in dark mode */
+  }
+  
+  body.dark-mode .transfer-player {
+    color: #f0f0f0; /* Light color for text */
+  }
+  
+  body.dark-mode .out-player {
+    border-right: 1px solid #555; /* Darker border color */
+  }
+  
+  body.dark-mode h4, body.dark-mode p {
+    color: #f0f0f0; /* Light color for headings and paragraphs */
+  }

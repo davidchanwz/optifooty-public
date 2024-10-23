@@ -1,0 +1,69 @@
+/* src/components/OptimiserSquad.css */
+
+.squad {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as necessary */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pitch {
+    width: 90%;
+    height: 90%;
+    border: 5px solid whitesmoke; /* Blue border around the pitch */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
+}
+
+.optimiser-player-icon {
+    position: absolute;
+    width: auto;
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+}
+
+.optimiser-player-icon .transfer-icon {
+    position: absolute;
+    top: 50%;
+    background-color: greenyellow;
+    border-radius: 50%;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    right: -30px;
+    transform: translateY(-50%);
+    width: 20px; /* Adjust the size of the transfer icon as necessary */
+    height: 20px;
+    display: none; /* Hide by default */
+}
+
+.optimiser-player-icon.selected .transfer-icon {
+    display: block; /* Show the transfer icon when selected */
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9; /* Make sure it covers all other content */
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+
+    .pitch {
+        border: 2px solid whitesmoke; /* Blue border around the pitch */
+    }
+
+    .optimiser-player-icon .transfer-icon {
+        width: 15px; /* Adjust the size of the transfer icon as necessary */
+        height: 15px;
+    }
+
+}

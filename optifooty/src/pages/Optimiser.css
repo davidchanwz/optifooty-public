@@ -1,0 +1,80 @@
+/* src/pages/Optimiser.css */
+
+.optimiser-text-section h1,
+.optimiser-text-section h3,
+.optimiser-text-section p {
+    text-align: left;
+    margin: 7px;
+}
+
+.optimiser-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    box-sizing: border-box; /* Include padding in the total width and height */
+    align-items: center;
+    padding: 5px; /* Add padding to container */
+    gap: 20px; /* Add gap between left and right sections */
+    background-color: #ffffff; /* Light background color */
+}
+
+.optimiser-left, .optimiser-right {
+    flex: 1; /* Flex properties for responsive behavior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: auto;
+}
+
+.optimiser-left {
+    max-width: 740px;
+}
+
+.constraint-container {
+    display: flex;
+    flex-direction: column; /* Stack children in a column */
+    width: 100%;
+    margin: 30px ; /* Adjust the margin for spacing between containers */
+    padding: 40px; /* Add padding inside the containers */
+    background-color: #e9ecef; /* Light grey background for differentiation */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Dark mode styles */
+body.dark-mode .optimiser-container {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .optimiser-left, body.dark-mode .optimiser-right, 
+body.dark-mode .constraint-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+@media (max-width: 768px) {
+    .optimiser-container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .optimiser-left, .optimiser-right {
+        flex: 1 1 100%; /* Stack sections vertically on small screens */
+        align-items: center;
+        width: 100%;
+        padding: 10px 0; /* Adjust padding for mobile view */
+    }
+
+    .constraint-container {
+        width: 50%;
+    }
+}

@@ -1,0 +1,127 @@
+/* src/components/OptimalLineup.css */
+
+.optimal-lineup {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as necessary */
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f8f9fa; /* Light background color */
+}
+  
+.total-points {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.lineup-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as necessary */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.pitch {
+    width: 90%;
+    height: auto;
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+  
+.optimal-player-icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.player-points {
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    background-color: greenyellow;
+    border-radius: 50%;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    right: -40px;
+    transform: translateY(-50%);
+
+    
+}
+  
+.bench-container {
+    margin: 20px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    height: 100%;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    position: relative;
+}
+  
+.bench-player-icon {
+    position: relative;
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 0px;
+}
+
+/* Dark mode styles */
+body.dark-mode .optimal-lineup {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .total-points {
+    color: #fff;
+}
+
+body.dark-mode .pitch {
+    border: 5px solid #444444;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .bench-container {
+    background-color: gray;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .pitch {
+        width: 100%;
+    }
+
+    .bench-container {
+        width: 90%;
+    }
+
+    .player-points {
+        font-size: 9px;
+        right: -35px;
+        padding: 3px;
+
+
+    }
+
+}

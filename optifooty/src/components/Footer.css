@@ -1,0 +1,39 @@
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 30px;
+    padding-bottom: -20px;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures items wrap to the next line if needed */
+}
+
+.footer a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: cyan;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 10px; /* Reduce the gap between items */
+        justify-content: space-evenly; /* Distribute items evenly */
+        flex-wrap: wrap; /* Ensure items wrap to the next line if needed */
+    }
+
+    .footer-links a {
+        margin: 5px; /* Add some margin to each link */
+    }
+}

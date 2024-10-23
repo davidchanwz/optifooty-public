@@ -1,0 +1,35 @@
+/* Dark mode styles for More Button and Dropdown Menu */
+body.dark-mode .more-button {
+  background-color: #007bff;
+  color: white;
+}
+
+body.dark-mode .more-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .more-button:active {
+  background-color: #004494;
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #333;
+  border: 1px solid #444;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .dropdown-header {
+  color: white;
+}
+
+body.dark-mode .dropdown-menu button,
+body.dark-mode .dropdown-menu a {
+  color: white;
+}
+
+body.dark-mode .dropdown-menu button:hover,
+body.dark-mode .dropdown-menu a:hover {
+  background-color: #555;
+  color: #007bff;
+}

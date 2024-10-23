@@ -1,0 +1,127 @@
+.your-team-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensure content wraps on smaller screens */
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding-top: 10px;
+    box-sizing: border-box;
+    /* Include padding in the total width and height */
+    align-items: center;
+    padding: 5px;
+    /* Add padding to container */
+    gap: 20px;
+    /* Add gap between left and right sections */
+}
+
+.team h1,
+.team h3,
+.team p {
+    text-align: left;
+    margin: 7px;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    /* Flex properties for responsive behavior */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f8f9fa;
+    /* Light background color */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    height: auto;
+}
+
+.left-section {
+    max-width: 740px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .your-team-container {
+        align-items: center;
+    }
+
+    .left-section,
+    .right-section {
+        flex: 1 1 100%;
+        /* Stack sections vertically on small screens */
+        align-items: center;
+    }
+
+    .team h3 {
+        font-size: 14px;
+        margin: 0px;
+        margin-top: 3px;
+    }
+
+    .team p {
+        font-size: 10px;
+        margin: 0px;
+        margin-top: 3px;
+    }
+
+
+}
+
+.right-section {
+    overflow-x: hidden;
+}
+
+.player-selector {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-list-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+/* Dark mode styles */
+body.dark-mode .your-team-container {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .left-section,
+body.dark-mode .right-section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Darker shadow */
+}
+
+body.dark-mode .player-selector,
+body.dark-mode .search-bar-container,
+body.dark-mode .player-list-container,
+body.dark-mode .pagination {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}

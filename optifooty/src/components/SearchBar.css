@@ -1,0 +1,73 @@
+/* src/components/SearchBar.css */
+
+.search-bar-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.search-bar {
+    width: 100%;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.search-bar:focus {
+    border: 1px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.clear-button {
+    position: absolute;
+    right: 4%;
+    top: 1%;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    outline: none;
+}
+
+.clear-button:hover {
+    color: #333;
+}
+
+/* Dark mode styles */
+body.dark-mode .search-bar-container {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode .search-bar {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode .clear-button {
+    color: #bbb;
+}
+
+body.dark-mode .clear-button:hover {
+    color: #fff;
+}
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+    .search-bar-container {
+        width: 100%;
+    }
+
+    .search-bar {
+        width: calc(100% - 30px);
+    }
+}

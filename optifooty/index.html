@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/src/assets/images/logo2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>OptiFooty</title>
+
+    <!-- Open Graph meta tags for preview image -->
+    <meta property="og:title" content="OptiFooty">
+    <meta property="og:description" content="Optimize your Fantasy Premier League team with OptiFooty.">
+    <meta property="og:image" content="https://optifooty.vercel.app/assets/logo-gCKga8Uy.png">
+    <meta property="og:url" content="https://optifooty.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOMContentLoaded event fired');
+        const savedTheme = localStorage.getItem('theme');
+        console.log('Saved theme:', savedTheme);
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+          document.body.classList.add('dark-mode');
+          console.log('Dark mode applied');
+        } else {
+          console.log('Light mode applied');
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

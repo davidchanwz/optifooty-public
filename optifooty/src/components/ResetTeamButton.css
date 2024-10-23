@@ -1,0 +1,36 @@
+/* src/components/ResetTeamButton.css */
+
+.reset-team-button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 12px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    outline: none;
+}
+
+.reset-team-button:hover {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.reset-team-button:active {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .reset-team-button {
+        width: 35%;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}

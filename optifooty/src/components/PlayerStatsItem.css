@@ -1,0 +1,110 @@
+/* src/components/PlayerStatsItem.css */
+
+.player-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #fff;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.player-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.player-name,
+.player-position,
+.player-team {
+    flex: 1;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.compare-button {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.compare-button:hover {
+    background: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.compare-button.selected {
+    background: #ffc107;
+    border: 2px solid #ff9800;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.4);
+}
+
+/* Dark mode styles */
+body.dark-mode .player-item {
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .compare-button {
+    background: #28a745;
+}
+
+body.dark-mode .compare-button:hover {
+    background: #218838;
+}
+
+body.dark-mode .compare-button.selected {
+    background: #ffc107;
+    border: 2px solid #ff9800;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.4);
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    .player-item {
+        flex-direction: column;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .player-info {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .player-name,
+    .player-position,
+    .player-team {
+        padding: 5px 0;
+    }
+
+    .compare-button {
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
+        max-width: 120px;
+    }
+}

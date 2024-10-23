@@ -1,0 +1,86 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.page-item {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.page-link {
+    background-color: lightgrey;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    color: black;
+}
+
+.page-link:hover {
+    background-color: lightgreen;
+    transform: scale(1.05);
+}
+
+.page-link.active {
+    background-color: lightgreen;
+    cursor: default;
+    transform: none;
+}
+
+.first-button,
+.prev-button,
+.next-button,
+.last-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.first-button:hover,
+.prev-button:hover,
+.next-button:hover,
+.last-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.first-button:disabled,
+.prev-button:disabled,
+.next-button:disabled,
+.last-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .page-item {
+        margin: 2px;
+    }
+
+    .page-link,
+    .first-button,
+    .prev-button,
+    .next-button,
+    .last-button {
+        padding: 5px 10px;
+        margin: 2px;
+        font-size: 14px;
+        gap: 2px;
+    }
+}

@@ -1,0 +1,114 @@
+.player-stats-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%; /* Limit the height to make it scrollable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Hide overflow on the main content */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.popup-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #0056b3;
+}
+
+.stats-details {
+    flex: 1;
+    overflow-y: auto; /* Make only the stats portion scrollable */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats-details {
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        max-height: 70%; /* Adjust max height for mobile view */
+    }
+
+    .player-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode .player-stats-popup {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+body.dark-mode .popup-content {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .popup-header h2 {
+    color: #fff;
+}
+
+body.dark-mode .close-button {
+    color: #66b2ff;
+}
+
+body.dark-mode .close-button:hover {
+    color: #3399ff;
+}

@@ -1,0 +1,75 @@
+/* src/pages/TransferResults.css */
+
+.transfer-results-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding-top: 10px;
+    box-sizing: border-box; /* Include padding in the total width and height */
+    align-items: center;
+    padding: 5px; /* Add padding to container */
+    gap: 20px; /* Add gap between left and right sections */
+    background-color: #ffffff; /* Light background color */
+  }
+  
+  .transfer-results-left, .transfer-results-right {
+    flex: 1; /* Flex properties for responsive behavior */
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: auto;
+  }
+  
+  .transfer-results-left {
+    max-width: 740px;
+  }
+  
+  @media (max-width: 768px) {
+    .transfer-results-container {
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .transfer-results-left, .transfer-results-right {
+      flex: 1 1 100%; /* Stack sections vertically on small screens */
+      align-items: center;
+      width: 100%;
+      padding: 10px 0; /* Adjust padding for mobile view */
+    }
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode .transfer-results-container {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .transfer-results-left, body.dark-mode .transfer-results-right {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+  }
+  
+  .save-transfers-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .save-transfers-button:hover {
+    background-color: #0056b3;
+  }

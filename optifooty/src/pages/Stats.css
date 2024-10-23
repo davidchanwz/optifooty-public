@@ -1,0 +1,103 @@
+/*Stats.css*/
+
+.stats-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100%;
+    width: 100%;
+    margin-top: 2px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    background-color: #007bff;
+    color: white;
+}
+
+.tab.active {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.comparison-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparison-player {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .tab {
+        padding: 7px 14px;
+        margin: 0 2px;
+        font-size: 14px;
+    }
+
+    .comparison-player {
+        padding: 10px;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode .stats-container {
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .tab {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .tab.active {
+    background-color: #555;
+}
+
+body.dark-mode .comparison-player {
+    background-color: #333;
+}
+
+body.dark-mode .stat-item {
+    background: #444;
+}
+
+body.dark-mode .stat-key {
+    color: #66b2ff;
+}

@@ -1,0 +1,11 @@
+.team-optimiser {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+body.dark-mode .team-optimiser {
+    background-color: #121212;
+    color: #ffffff;
+}

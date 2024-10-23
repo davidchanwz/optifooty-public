@@ -1,0 +1,43 @@
+/* src/pages/Terms.css */
+
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.terms-container h1,
+.terms-container h2 {
+    text-align: center;
+}
+
+.terms-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.terms-container h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.terms-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .terms-container h1 {
+        font-size: 28px;
+    }
+
+    .terms-container h2 {
+        font-size: 22px;
+    }
+
+    .terms-container p {
+        font-size: 16px;
+    }
+}

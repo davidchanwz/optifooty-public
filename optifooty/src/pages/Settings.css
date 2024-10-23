@@ -1,0 +1,73 @@
+/* src/pages/Settings.css */
+
+.settings-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    height:auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .settings-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .dark-mode-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .dark-mode-toggle button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dark-mode-toggle button:hover {
+    background-color: #0056b3;
+  }
+  
+  body.dark-mode .settings-container {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-mode .dark-mode-toggle {
+    background-color: #444;
+    border-color: #666;
+  }
+  
+  body.dark-mode .dark-mode-toggle button {
+    background-color: #555;
+  }
+  
+  body.dark-mode .dark-mode-toggle button:hover {
+    background-color: #777;
+  }
+  
+  @media (max-width: 600px) {
+    .settings-container {
+      padding: 10px;
+    }
+  
+    .dark-mode-toggle {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

@@ -1,0 +1,90 @@
+/* src/components/TransferPlayers.css */
+.transfer-players {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-cancel {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.transfer-players-button,
+.optimiser-save-btn,
+.optimiser-cancel-btn {
+    background-color: #1e90ff; /* Solid blue color */
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Adjust padding for desired size */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block; /* Ensure the button content is fully clickable */
+    width: auto; /* Make sure the button size is appropriate */
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for background color, scale, and shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.transfer-players-button:hover,
+.optimiser-save-btn:hover,
+.optimiser-cancel-btn:hover {
+    background-color: #1c86ee; /* Slightly darker blue on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+    transform: scale(1.05);
+}
+
+.transfer-players-button:active,
+.optimiser-save-btn:active,
+.optimiser-cancel-btn:active {
+    background-color: #1a7bd3; /* Even darker blue on active */
+    transform: scale(0.98); /* Slightly shrink on active */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reduce shadow on active */
+}
+
+.optimiser-save-btn {
+    background-color: #28a745; /* Green color for save button */
+}
+
+.optimiser-save-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.optimiser-save-btn:active {
+    background-color: #1e7b34; /* Even darker green on active */
+}
+
+.optimiser-cancel-btn {
+    background-color: #ff4d4d; /* Red color for cancel button */
+}
+
+.optimiser-cancel-btn:hover {
+    background-color: #ff3333; /* Darker red on hover */
+}
+
+.optimiser-cancel-btn:active {
+    background-color: #e62e2e; /* Even darker red on active */
+}
+
+@media (max-width: 768px) {
+    .transfer-players-button {
+        width: 50%; /* Adjust width for smaller screens */
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .optimiser-save-btn,
+    .optimiser-cancel-btn {
+        width: 100%;
+        font-size: 12px;
+        padding: 5px 10px;
+        
+    }
+}
+

@@ -1,0 +1,93 @@
+/* src/components/PlayerStatsFilter.css */
+
+.player-stats-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.player-stats-filter select {
+    padding: 7px; /* Reduced padding for smaller size */
+    font-size: 13px; /* Reduced font size for smaller size */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    max-width: 160px; /* Reduced max width */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player-stats-filter select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.player-stats-filter select option {
+    white-space: nowrap;
+}
+
+.player-stats-filter select::-webkit-scrollbar {
+    width: 8px; /* Adjusted scrollbar width */
+}
+
+.player-stats-filter select::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 5px;
+}
+
+.player-stats-filter .reset-button {
+    padding: 7px 10px; /* Reduced padding for smaller size */
+    font-size: 13px; /* Reduced font size for smaller size */
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.player-stats-filter .reset-button:hover {
+    background-color: #ff3333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Dark mode styles */
+body.dark-mode .player-stats-filter select {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode .player-stats-filter select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+body.dark-mode .player-stats-filter .reset-button {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+body.dark-mode .player-stats-filter .reset-button:hover {
+    background-color: #ff3333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .player-stats-filter {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .player-stats-filter select,
+    .player-stats-filter .reset-button {
+        width: 100%;
+        max-width: none;
+    }
+}

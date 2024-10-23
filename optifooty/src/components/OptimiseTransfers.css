@@ -1,0 +1,64 @@
+.optimise-transfers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.optimise-transfers-button {
+  background-color: #1e90ff; /* Solid blue color */
+  color: white;
+  border: none;
+  padding: 12px 25px; /* Adjust padding for desired size */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block; /* Ensure the button content is fully clickable */
+  text-align: center;
+  width: auto; /* Make sure the button size is appropriate */
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for background color, scale, and shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin: 10px; /* Add margin for spacing between buttons */
+}
+
+.optimise-transfers-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.optimise-transfers-button:hover {
+  background: linear-gradient(90deg, #5b86e5, #36d1dc);
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.loading-message {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .optimise-transfers-button {
+    width: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
