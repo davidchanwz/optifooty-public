@@ -4,9 +4,9 @@
 
 OptiFooty
 
-## Proposed Level of Achievement
+## Level of Achievement
 
-Apollo
+Artemis
 
 ## Motivation
 
